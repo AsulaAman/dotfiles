@@ -59,6 +59,13 @@
 
 [init]
   defaultBranch = master
+
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+
 [user]
 	email = asulaaman@gmail.com
-	name = (Asula Aman)
+	name = Asula Aman
